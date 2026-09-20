@@ -1,0 +1,27 @@
+{
+  "name": "mandala-maker",
+  "version": "1.0.0",
+  "description": "Draw a mandala with mirrored symmetry: pick the number of folds, paint with a brush, and export your mandala as PNG or SVG.",
+  "repository": "github:evoluteur/mandala-maker",
+  "homepage": "https://evoluteur.github.io/mandala-maker/",
+  "copyright": "(c) 2026 Olivier Giulieri",
+  "author": "Olivier Giulieri (https://evoluteur.github.io/)",
+  "license": "MIT",
+  "keywords": [
+    "mandala",
+    "mandala-maker",
+    "mandala-generator",
+    "symmetry",
+    "kaleidoscope",
+    "drawing",
+    "canvas",
+    "svg",
+    "png",
+    "sacred-geometry",
+    "meditation",
+    "art",
+    "esoterica",
+    "pwa",
+    "javascript"
+  ]
+}

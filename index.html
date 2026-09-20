@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mandala Maker</title>
+    <meta
+      name="description"
+      content="Draw a mandala with mirrored symmetry: pick the number of folds, paint with a brush, and export your mandala as PNG or SVG. Free, no sign-up."
+    />
+    <meta name="author" content="Olivier Giulieri" />
+    <link rel="canonical" href="https://evoluteur.github.io/mandala-maker/" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="icon-192.png" />
+    <meta name="theme-color" content="#1a212d" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Overpass"
+    />
+    <link id="omg-core-css" rel="stylesheet" href="css/core.css" />
+    <link id="omg-theme-css" rel="stylesheet" href="css/themes/dark/dark.css" />
+    <link id="omg-density-css" rel="stylesheet" href="css/densities.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/mandala.css" />
+
+    <script src="js/omg.js"></script>
+    <script src="js/mandala.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        addEventListener("load", () => navigator.serviceWorker.register("sw.js"));
+      }
+    </script>
+  </head>
+
+  <body onload="setupPage('home'); initMandala();" id="omg-body">
+    <div id="omg-header">
+      <h1>Mandala Maker</h1>
+      <div id="omg-theme-picker"></div>
+    </div>
+    <h2>Draw with mirrored symmetry</h2>
+    <div class="content">
+      <p class="tagline">
+        Draw anywhere on the canvas and your strokes are repeated around the
+        center, again and again. Change the number of folds at any time and the
+        whole mandala turns with it, then save it as an image.
+      </p>
+
+      <div class="layout">
+        <div class="stage">
+          <div class="canvas-wrap" id="canvas-wrap">
+            <canvas id="mandala" aria-label="Mandala drawing area"></canvas>
+          </div>
+          <div class="btns under">
+            <button type="button" id="btn-undo" class="ghost" onclick="undo()">Undo</button>
+            <button type="button" id="btn-redo" class="ghost" onclick="redo()">Redo</button>
+            <button type="button" class="ghost" onclick="clearAll()">Clear</button>
+            <button type="button" class="ghost" onclick="surprise()">Surprise me</button>
+          </div>
+          <div class="btns under">
+            <button type="button" onclick="savePng()">Save PNG</button>
+            <button type="button" onclick="saveSvg()">Save SVG</button>
+          </div>
+        </div>
+
+        <div class="side">
+          <div class="panel">
+            <h3>Symmetry</h3>
+            <div class="ctl">
+              <label for="folds">Folds</label><span class="val" id="folds-val"></span>
+              <input type="range" id="folds" min="2" max="24" step="1" />
+            </div>
+            <label class="opt"><input type="checkbox" id="mirror" /> Mirror each fold</label>
+            <label class="opt"><input type="checkbox" id="guides" /> Show guides</label>
+          </div>
+
+          <div class="panel">
+            <h3>Brush</h3>
+            <div class="ctl">
+              <label for="size">Size</label><span class="val" id="size-val"></span>
+              <input type="range" id="size" min="1" max="40" step="1" />
+            </div>
+            <div class="ctl">
+              <label for="opacity">Opacity</label><span class="val" id="opacity-val"></span>
+              <input type="range" id="opacity" min="10" max="100" step="5" />
+            </div>
+            <div class="chips" id="color-mode" role="group" aria-label="Color mode"></div>
+            <div class="swatches" id="swatches" role="group" aria-label="Colors"></div>
+          </div>
+
+          <div class="panel">
+            <h3>Canvas</h3>
+            <div class="chips" id="bg-chips" role="group" aria-label="Background"></div>
+            <label class="opt"><input type="checkbox" id="transparent" /> Transparent background when saving</label>
+          </div>
+        </div>
+      </div>
+
+      <p class="note">
+        Tip: on a phone or tablet, draw with a finger. Undo with Ctrl/Cmd+Z.
+        Strokes are kept in your browser, so you can come back to your mandala.
+      </p>
+      <p class="footer">
+        &#169; 2026
+        <a href="https://evoluteur.github.io/">Olivier Giulieri</a> ·
+        <a href="https://github.com/evoluteur/mandala-maker">Open source</a>
+      </p>
+    </div>
+  </body>
+</html>
