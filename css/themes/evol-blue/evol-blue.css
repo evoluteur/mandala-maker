@@ -60,10 +60,6 @@ a:hover {
   }
 }
 
-.card-detail {
-  background: #0288d1 url("spirals.png");
-}
-
 /* title gradient, same effect as the dark theme but keeping this
    theme's own accent color (like react-morph-charts' omg theme) */
 h1,

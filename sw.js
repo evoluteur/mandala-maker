@@ -1,11 +1,14 @@
-const CACHE = "mandala-maker-v1";
+const CACHE = "mandala-maker-v2";
 const ASSETS = [
   "./",
   "index.html",
+  "about.html",
+  "css/about.css",
   "css/common.css",
   "css/core.css",
   "css/densities.css",
   "css/mandala.css",
+  "css/overrides.css",
   "css/themes/dark/bg0.png",
   "css/themes/dark/dark.css",
   "css/themes/evol-blue/evol-blue.css",

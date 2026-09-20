@@ -40,8 +40,8 @@
   border-color: white;
 }
 .swatch.selected {
-  border-color: #ffa500;
-  box-shadow: 0 0 0 2px var(--card-bg), 0 0 0 4px #ffa500;
+  border-color: var(--accent, #ffa500);
+  box-shadow: 0 0 0 2px var(--card-bg), 0 0 0 4px var(--accent, #ffa500);
 }
 .swatch-custom {
   position: relative;

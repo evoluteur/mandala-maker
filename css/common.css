@@ -5,30 +5,6 @@
   z-index: 450;
 }
 
-/* core.css is shared across other projects, so the theme-picker's swatch
-   styling stays untouched there -- this overrides it to render icons
-   (sun/moon/spiral, same set as react-morph-charts' ThemeToggle) instead of
-   plain colored circles, without needing to edit the shared file. */
-#omg-theme-picker {
-  gap: 2px;
-}
-#omg-theme-picker > a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 28px;
-  width: 28px;
-  border-radius: 50%;
-  border: 1px solid transparent;
-  background: none;
-  color: currentColor;
-  opacity: 0.75;
-}
-#omg-theme-picker > a:hover,
-#omg-theme-picker > a.selected {
-  opacity: 1;
-}
-
 h1 {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -117,7 +93,7 @@ svg.plain:hover {
   width: 100%;
   padding: 0;
   margin: 4px 0 0;
-  accent-color: #ffa500;
+  accent-color: var(--accent, #ffa500);
   background: none;
   border: none;
 }
@@ -141,7 +117,7 @@ svg.plain:hover {
   width: 1.1em;
   height: 1.1em;
   padding: 0;
-  accent-color: #ffa500;
+  accent-color: var(--accent, #ffa500);
 }
 
 .btns {
@@ -179,7 +155,7 @@ button.ghost:focus,
 .chips button.selected,
 .chips button[aria-pressed="true"] {
   background-color: var(--card-bg);
-  border-color: #ffa500;
+  border-color: var(--accent, #ffa500);
 }
 button:disabled {
   opacity: 0.6;
@@ -209,7 +185,7 @@ button:disabled {
 }
 .tabs button.selected {
   background-color: var(--card-bg);
-  border-color: #ffa500;
+  border-color: var(--accent, #ffa500);
 }
 
 /* Small stat tiles */
@@ -245,6 +221,13 @@ button:disabled {
 }
 .footer {
   margin-top: 40px;
+}
+.footer p {
+  margin: 0 0 6px;
+  line-height: 1.5;
+}
+.footer p.copyright {
+  margin-top: 20px;
 }
 
 @media only screen and (max-width: 560px) {

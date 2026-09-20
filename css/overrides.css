@@ -1,0 +1,57 @@
+/*
+  mandala-maker customizations on top of the shared omg-themes styles.
+  core.css, densities.css, the themes and omg.js are synced from omg-themes
+  (npm run sync:themes), so don't edit them here: add overrides below.
+  Per-theme rules use html[data-theme="..."] (set by setTheme in omg.js).
+*/
+
+/* sticky header row for .omg-table */
+.omg-table th {
+  position: sticky;
+  top: 100px;
+  z-index: 50;
+}
+
+/* :where() keeps these as low-specificity as the original theme rules, so the
+   project stylesheets that load after can still override them.
+
+   dark theme: light blue accent and links instead of orange.
+   --accent is also read by css/common.css, css/mandala.css and css/about.css
+   (they fall back to orange in the other themes). */
+html[data-theme="dark"] {
+  --accent: #aad4ff;
+  --accent-hover: #d8ecff;
+  --link: #a6cbf5; /* lighter take on the blue at the end of the h1 title gradient (#70ade6) */
+  --link-hover: #cfe3fa;
+}
+:where(html[data-theme="dark"]) h2 {
+  background-image: linear-gradient(white, var(--accent));
+}
+:where(html[data-theme="dark"]) a,
+:where(html[data-theme="dark"]) a:visited {
+  color: var(--link);
+}
+:where(html[data-theme="dark"]) a:active,
+:where(html[data-theme="dark"]) a:hover {
+  color: var(--link-hover);
+}
+:where(html[data-theme="dark"]) svg:hover {
+  fill: var(--accent);
+}
+
+/* light theme: links in the same blue as the buttons */
+:where(html[data-theme="light"]) a,
+:where(html[data-theme="light"]) a:visited {
+  color: #3182ce;
+}
+:where(html[data-theme="light"]) a:hover {
+  color: #2b6cb0;
+}
+
+/* blue theme: black text on the orange buttons */
+:where(html[data-theme="evol-blue"]) button {
+  color: black;
+}
+:where(html[data-theme="evol-blue"]) button:active {
+  color: white;
+}

@@ -73,6 +73,8 @@ const setTheme = (id) => {
   if (elem) {
     elem.setAttribute("href", `css/themes/${id}/${id}.css`);
     localStorage.setItem("omg-theme", id);
+    // lets page css target a theme: html[data-theme="evol-blue"] ...
+    document.documentElement.setAttribute("data-theme", id);
   }
 };
 

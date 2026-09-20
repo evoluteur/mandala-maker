@@ -23,5 +23,8 @@
     "esoterica",
     "pwa",
     "javascript"
-  ]
+  ],
+  "scripts": {
+    "sync:themes": "sh scripts/sync-omg-themes.sh"
+  }
 }
