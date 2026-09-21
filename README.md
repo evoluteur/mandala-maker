@@ -27,6 +27,8 @@ The pages are plain HTML, CSS and JavaScript, with no dependencies and no build 
 - The app logic is in [js/mandala.js](https://github.com/evoluteur/mandala-maker/blob/main/js/mandala.js).
 - Three color themes (dark, light and blue) are shared with my other projects.
 
+There is also an [About mandalas](https://evoluteur.github.io/mandala-maker/about.html) page on what mandalas are, where they come from (Hindu and Buddhist traditions, Jung), and what research does and does not say about their effect on the mind.
+
 Mandala-Maker is open source at [GitHub](https://github.com/evoluteur/mandala-maker) with MIT license.
 
 Had fun browsing the app? [Buy me a coffee by becoming a sponsor](https://github.com/sponsors/evoluteur).

@@ -3,11 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mandala Maker</title>
+    <title>Mandala Maker - Draw a Mandala Online with Mirrored Symmetry</title>
     <meta
       name="description"
       content="Draw a mandala with mirrored symmetry: pick the number of folds, paint with a brush, and export your mandala as PNG or SVG. Free, no sign-up."
     />
+    <meta
+      name="keywords"
+      content="mandala maker, mandala generator, mandala drawing, draw a mandala online, symmetry drawing, kaleidoscope drawing, mandala art, sacred geometry, meditation, coloring, save mandala as png svg"
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="author" content="Olivier Giulieri" />
     <link rel="canonical" href="https://evoluteur.github.io/mandala-maker/" />
     <link rel="icon" type="image/png" href="favicon.png" />
@@ -33,6 +38,45 @@
         addEventListener("load", () => navigator.serviceWorker.register("sw.js"));
       }
     </script>
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Evoluteur" />
+    <meta property="og:title" content="Mandala Maker" />
+    <meta property="og:description" content="Draw anywhere and your strokes repeat around the center. Choose 2 to 24 folds, paint with a brush, and save your mandala as PNG or SVG. Free, no sign-up." />
+    <meta property="og:url" content="https://evoluteur.github.io/mandala-maker/" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/evoluteur/mandala-maker/main/mandala-maker.png" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="1028" />
+    <meta property="og:image:alt" content="Mandala Maker drawing a symmetrical mandala on a canvas" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mandala Maker" />
+    <meta name="twitter:description" content="Draw a mandala with mirrored symmetry and save it as PNG or SVG." />
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/evoluteur/mandala-maker/main/mandala-maker.png" />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Mandala Maker",
+  "description": "Draw a mandala with mirrored symmetry: pick the number of folds, paint with a brush, and export your mandala as PNG or SVG. Free, no sign-up.",
+  "url": "https://evoluteur.github.io/mandala-maker/",
+  "applicationCategory": "DesignApplication",
+  "operatingSystem": "Any (web browser)",
+  "browserRequirements": "Requires JavaScript",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "image": "https://raw.githubusercontent.com/evoluteur/mandala-maker/main/mandala-maker.png",
+  "license": "https://github.com/evoluteur/mandala-maker/blob/main/LICENSE",
+  "sameAs": "https://github.com/evoluteur/mandala-maker",
+  "author": {
+    "@type": "Person",
+    "name": "Olivier Giulieri",
+    "url": "https://evoluteur.github.io/"
+  }
+}
+    </script>
   </head>
 
   <body onload="setupPage('home'); initMandala();" id="omg-body">
@@ -40,12 +84,14 @@
       <h1>Mandala Maker</h1>
       <div id="omg-theme-picker"></div>
     </div>
+    <noscript><p class="tagline">Mandala Maker draws on an HTML canvas, so it needs JavaScript. Enable it to draw a mandala, or read <a href="about.html">about mandalas</a>.</p></noscript>
     <h2>Draw with mirrored symmetry</h2>
     <div class="content">
       <p class="tagline">
         Draw anywhere on the canvas and your strokes are repeated around the
         center, again and again. Change the number of folds at any time and the
         whole mandala turns with it, then save it as an image.
+        New to mandalas? Read <a href="about.html">about mandalas</a>.
       </p>
 
       <div class="layout">
