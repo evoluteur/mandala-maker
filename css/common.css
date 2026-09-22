@@ -8,20 +8,20 @@
 /* GitHub link, top right just below the theme toggle (same look as its icons) */
 #omg-github {
   position: absolute;
-  top: 35px;
+  top: 37px;
   right: 5px;
   z-index: 200;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   opacity: 0.75;
 }
 #omg-github svg {
-  width: 20px; /* same size in every theme (the themes' generic svg rule differs) */
-  height: 20px;
+  width: 28px; /* same size in every theme (the themes' generic svg rule differs) */
+  height: 28px;
 }
 html[data-theme="evol-blue"] #omg-github svg {
   fill: white; /* like the theme toggle icons on the blue background */
