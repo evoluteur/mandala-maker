@@ -153,7 +153,7 @@ const render = () => {
 
 const resize = () => {
   const wrap = $("canvas-wrap");
-  const w = Math.max(240, Math.floor(wrap.clientWidth - 6));
+  const w = Math.max(240, Math.floor(wrap.clientWidth)); // clientWidth is inside the border: the canvas stays square
   if (w === cssSize && canvas.width === Math.round(w * dpr)) return;
   cssSize = w;
   dpr = window.devicePixelRatio || 1;

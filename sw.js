@@ -1,4 +1,4 @@
-const CACHE = "mandala-maker-v2";
+const CACHE = "mandala-maker-v7";
 const ASSETS = [
   "./",
   "index.html",

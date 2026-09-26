@@ -2,6 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-063933E3C2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-063933E3C2");
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mandala Maker - Draw a Mandala Online with Mirrored Symmetry</title>
     <meta
@@ -35,64 +44,106 @@
     <script src="js/mandala.js"></script>
     <script>
       if ("serviceWorker" in navigator) {
-        addEventListener("load", () => navigator.serviceWorker.register("sw.js"));
+        addEventListener("load", () =>
+          navigator.serviceWorker.register("sw.js"),
+        );
       }
     </script>
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Evoluteur" />
     <meta property="og:title" content="Mandala Maker" />
-    <meta property="og:description" content="Draw anywhere and your strokes repeat around the center. Choose 2 to 24 folds, paint with a brush, and save your mandala as PNG or SVG. Free, no sign-up." />
-    <meta property="og:url" content="https://evoluteur.github.io/mandala-maker/" />
-    <meta property="og:image" content="https://raw.githubusercontent.com/evoluteur/mandala-maker/main/mandala-maker.png" />
+    <meta
+      property="og:description"
+      content="Draw anywhere and your strokes repeat around the center. Choose 2 to 24 folds, paint with a brush, and save your mandala as PNG or SVG. Free, no sign-up."
+    />
+    <meta
+      property="og:url"
+      content="https://evoluteur.github.io/mandala-maker/"
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/evoluteur/mandala-maker/main/mandala-maker.png"
+    />
     <meta property="og:image:width" content="800" />
     <meta property="og:image:height" content="1028" />
-    <meta property="og:image:alt" content="Mandala Maker drawing a symmetrical mandala on a canvas" />
+    <meta
+      property="og:image:alt"
+      content="Mandala Maker drawing a symmetrical mandala on a canvas"
+    />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Mandala Maker" />
-    <meta name="twitter:description" content="Draw a mandala with mirrored symmetry and save it as PNG or SVG." />
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/evoluteur/mandala-maker/main/mandala-maker.png" />
+    <meta
+      name="twitter:description"
+      content="Draw a mandala with mirrored symmetry and save it as PNG or SVG."
+    />
+    <meta
+      name="twitter:image"
+      content="https://raw.githubusercontent.com/evoluteur/mandala-maker/main/mandala-maker.png"
+    />
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Mandala Maker",
-  "description": "Draw a mandala with mirrored symmetry: pick the number of folds, paint with a brush, and export your mandala as PNG or SVG. Free, no sign-up.",
-  "url": "https://evoluteur.github.io/mandala-maker/",
-  "applicationCategory": "DesignApplication",
-  "operatingSystem": "Any (web browser)",
-  "browserRequirements": "Requires JavaScript",
-  "isAccessibleForFree": true,
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  },
-  "image": "https://raw.githubusercontent.com/evoluteur/mandala-maker/main/mandala-maker.png",
-  "license": "https://github.com/evoluteur/mandala-maker/blob/main/LICENSE",
-  "sameAs": "https://github.com/evoluteur/mandala-maker",
-  "author": {
-    "@type": "Person",
-    "name": "Olivier Giulieri",
-    "url": "https://evoluteur.github.io/"
-  }
-}
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Mandala Maker",
+        "description": "Draw a mandala with mirrored symmetry: pick the number of folds, paint with a brush, and export your mandala as PNG or SVG. Free, no sign-up.",
+        "url": "https://evoluteur.github.io/mandala-maker/",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "Any (web browser)",
+        "browserRequirements": "Requires JavaScript",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "image": "https://raw.githubusercontent.com/evoluteur/mandala-maker/main/mandala-maker.png",
+        "license": "https://github.com/evoluteur/mandala-maker/blob/main/LICENSE",
+        "sameAs": "https://github.com/evoluteur/mandala-maker",
+        "author": {
+          "@type": "Person",
+          "name": "Olivier Giulieri",
+          "url": "https://evoluteur.github.io/"
+        }
+      }
     </script>
   </head>
 
-  <body onload="setupPage('home'); initMandala();" id="omg-body">
+  <body
+    onload="
+      setupPage('home');
+      initMandala();
+    "
+    id="omg-body"
+  >
     <div id="omg-header">
       <h1>Mandala Maker</h1>
       <div id="omg-theme-picker"></div>
-      <a id="omg-github" href="https://github.com/evoluteur/mandala-maker" target="_blank" rel="noopener" title="Mandala Maker on GitHub" aria-label="Mandala Maker on GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+      <a
+        id="omg-github"
+        href="https://github.com/evoluteur/mandala-maker"
+        target="_blank"
+        rel="noopener"
+        title="Mandala Maker on GitHub"
+        aria-label="Mandala Maker on GitHub"
+        ><svg viewBox="0 0 16 16" aria-hidden="true">
+          <path
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+          /></svg
+      ></a>
     </div>
-    <noscript><p class="tagline">Mandala Maker draws on an HTML canvas, so it needs JavaScript. Enable it to draw a mandala, or read <a href="about.html">about mandalas</a>.</p></noscript>
+    <noscript
+      ><p class="tagline">
+        Mandala Maker draws on an HTML canvas, so it needs JavaScript. Enable it
+        to draw a mandala, or read <a href="about.html">about mandalas</a>.
+      </p></noscript
+    >
     <h2>Draw with mirrored symmetry</h2>
     <div class="content">
       <p class="tagline">
         Draw anywhere on the canvas and your strokes are repeated around the
         center, again and again. Change the number of folds at any time and the
-        whole mandala turns with it, then save it as an image.
-        New to mandalas? Read <a href="about.html">about mandalas</a>.
+        whole mandala turns with it, then save it as an image. New to mandalas?
+        Read <a href="about.html">about mandalas</a>.
       </p>
 
       <div class="layout">
@@ -100,15 +151,25 @@
           <div class="canvas-wrap" id="canvas-wrap">
             <canvas id="mandala" aria-label="Mandala drawing area"></canvas>
           </div>
-          <div class="btns under">
-            <button type="button" id="btn-undo" class="ghost" onclick="undo()">Undo</button>
-            <button type="button" id="btn-redo" class="ghost" onclick="redo()">Redo</button>
-            <button type="button" class="ghost" onclick="clearAll()">Clear</button>
-            <button type="button" class="ghost" onclick="surprise()">Surprise me</button>
-          </div>
-          <div class="btns under">
-            <button type="button" onclick="savePng()">Save PNG</button>
-            <button type="button" onclick="saveSvg()">Save SVG</button>
+          <div class="panel tools-panel">
+            <div class="btns under">
+              <button type="button" id="btn-undo" class="ghost" onclick="undo()">
+                Undo
+              </button>
+              <button type="button" id="btn-redo" class="ghost" onclick="redo()">
+                Redo
+              </button>
+              <button type="button" class="ghost" onclick="clearAll()">
+                Clear
+              </button>
+              <button type="button" class="ghost" onclick="surprise()">
+                Surprise me
+              </button>
+            </div>
+            <div class="btns under">
+              <button type="button" onclick="savePng()">Save PNG</button>
+              <button type="button" onclick="saveSvg()">Save SVG</button>
+            </div>
           </div>
         </div>
 
@@ -116,31 +177,56 @@
           <div class="panel">
             <h3>Symmetry</h3>
             <div class="ctl">
-              <label for="folds">Folds</label><span class="val" id="folds-val"></span>
+              <label for="folds">Folds</label
+              ><span class="val" id="folds-val"></span>
               <input type="range" id="folds" min="2" max="24" step="1" />
             </div>
-            <label class="opt"><input type="checkbox" id="mirror" /> Mirror each fold</label>
-            <label class="opt"><input type="checkbox" id="guides" /> Show guides</label>
+            <label class="opt"
+              ><input type="checkbox" id="mirror" /> Mirror each fold</label
+            >
+            <label class="opt"
+              ><input type="checkbox" id="guides" /> Show guides</label
+            >
           </div>
 
           <div class="panel">
             <h3>Brush</h3>
             <div class="ctl">
-              <label for="size">Size</label><span class="val" id="size-val"></span>
+              <label for="size">Size</label
+              ><span class="val" id="size-val"></span>
               <input type="range" id="size" min="1" max="40" step="1" />
             </div>
             <div class="ctl">
-              <label for="opacity">Opacity</label><span class="val" id="opacity-val"></span>
+              <label for="opacity">Opacity</label
+              ><span class="val" id="opacity-val"></span>
               <input type="range" id="opacity" min="10" max="100" step="5" />
             </div>
-            <div class="chips" id="color-mode" role="group" aria-label="Color mode"></div>
-            <div class="swatches" id="swatches" role="group" aria-label="Colors"></div>
+            <div
+              class="chips"
+              id="color-mode"
+              role="group"
+              aria-label="Color mode"
+            ></div>
+            <div
+              class="swatches"
+              id="swatches"
+              role="group"
+              aria-label="Colors"
+            ></div>
           </div>
 
           <div class="panel">
             <h3>Canvas</h3>
-            <div class="chips" id="bg-chips" role="group" aria-label="Background"></div>
-            <label class="opt"><input type="checkbox" id="transparent" /> Transparent background when saving</label>
+            <div
+              class="chips"
+              id="bg-chips"
+              role="group"
+              aria-label="Background"
+            ></div>
+            <label class="opt"
+              ><input type="checkbox" id="transparent" /> Transparent background
+              when saving</label
+            >
           </div>
         </div>
       </div>
@@ -151,17 +237,60 @@
       </p>
       <div class="footer">
         <p><a href="about.html">About mandalas</a></p>
-        <p>The code of this page is <a href="https://github.com/evoluteur/mandala-maker">Open source</a> with MIT license.</p>
-        <p>Had fun browsing the app? <a href="https://github.com/sponsors/evoluteur">Buy me a coffee by becoming a sponsor</a>.</p>
+        <p>
+          The code of this page is
+          <a href="https://github.com/evoluteur/mandala-maker">Open source</a>
+          with MIT license.
+        </p>
+        <p>
+          Had fun browsing the app?
+          <a href="https://github.com/sponsors/evoluteur"
+            >Buy me a coffee by becoming a sponsor</a
+          >.
+        </p>
         <p>
           You may also like
-          <a href="https://evoluteur.github.io/cymatics/" target="_blank" rel="noopener">Cymatics</a>,
-          <a href="https://evoluteur.github.io/sacred-geometry/" target="_blank" rel="noopener">Sacred Geometry</a>,
-          <a href="https://evoluteur.github.io/platonic-solids/" target="_blank" rel="noopener">Platonic Solids</a>,
-          and <a href="https://evoluteur.github.io/archimedean-solids/" target="_blank" rel="noopener">Archimedean Solids</a>.
-          See them all on <a href="https://evoluteur.github.io/esoterica.html" target="_blank" rel="noopener">Esoterica</a>.
+          <a
+            href="https://evoluteur.github.io/labyrinth-maker/"
+            target="_blank"
+            rel="noopener"
+            >Labyrinth Maker</a
+          >,
+          <a
+            href="https://evoluteur.github.io/maze-maker/"
+            target="_blank"
+            rel="noopener"
+            >Maze Maker</a
+          >,
+          <a
+            href="https://evoluteur.github.io/harmonograph-maker/"
+            target="_blank"
+            rel="noopener"
+            >Harmonograph Maker</a
+          >,
+          <a
+            href="https://evoluteur.github.io/sacred-geometry/"
+            target="_blank"
+            rel="noopener"
+            >Sacred Geometry</a
+          >, and
+          <a
+            href="https://evoluteur.github.io/sri-yantra/"
+            target="_blank"
+            rel="noopener"
+            >Sri Yantra</a
+          >. See them all on
+          <a
+            href="https://evoluteur.github.io/esoterica.html"
+            target="_blank"
+            rel="noopener"
+            >Esoterica</a
+          >.
         </p>
-        <p class="copyright">&#169; 2026 <a href="https://evoluteur.github.io/">Olivier Giulieri</a></p>
+        <p class="copyright">
+          &#169; 2026
+          <a href="https://evoluteur.github.io/">Olivier Giulieri</a>
+        </p>
       </div>
     </div>
   </body>

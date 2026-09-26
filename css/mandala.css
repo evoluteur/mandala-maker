@@ -1,5 +1,6 @@
 .canvas-wrap {
   position: relative;
+  box-sizing: border-box; /* the border stays inside the stage, so the drawing and the panel under it are the same width */
   width: 100%;
   border: 3px solid var(--card-border);
   border-radius: 12px;
@@ -21,6 +22,13 @@
 }
 .btns.under {
   margin: 12px 0 0;
+}
+/* Undo, Redo, Clear, Surprise me and the save buttons sit in a panel under the drawing */
+.tools-panel {
+  margin-top: 16px;
+}
+.tools-panel .btns.under:first-child {
+  margin-top: 0;
 }
 .swatches {
   display: flex;
