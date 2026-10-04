@@ -5,12 +5,24 @@
   z-index: 450;
 }
 
-/* GitHub link, top right just below the theme toggle (same look as its icons) */
-#omg-github {
+/* Theme toggle + GitHub link as one row, anchored top right (core.css
+   normally anchors #omg-theme-picker there directly; "static" here lets it
+   sit inline instead, with the gap coming from the flex row). */
+#omg-header-tools {
   position: absolute;
-  top: 37px;
+  top: 5px;
   right: 5px;
   z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#omg-header-tools #omg-theme-picker {
+  position: static;
+}
+
+/* GitHub link, same look as the theme toggle's icons */
+#omg-github {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -259,7 +271,7 @@ button:disabled {
 @media only screen and (max-width: 560px) {
   h1 {
     font-size: 1.6rem;
-    padding-right: 125px;
+    padding-right: 175px;
     white-space: normal;
     overflow: visible;
   }
